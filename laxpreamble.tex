@@ -1,0 +1,52 @@
+\usepackage{fontspec}
+\setmainfont{Lora_Regular.otf}
+
+\usepackage{indentfirst}
+\setlength{\parskip}{1em}
+\usepackage{setspace}
+\renewcommand{\baselinestretch}{1.2}
+
+\usepackage{polyglossia}
+\setmainlanguage{russian}
+\setotherlanguages{english}
+
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{a4paper, total={17cm, 23cm}}
+
+
+\usepackage{fancyhdr}
+
+\fancypagestyle{basicstyle}{%
+\fancyhf{}
+\lhead{\thesection}
+\rhead{\leftmark}
+\lfoot{Август 2018}
+\cfoot{FIL}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}}
+
+\fancypagestyle{beginningstyle}{%
+\fancyhf{}
+\rhead{FIL Правила мужского полевого лакросса, 2019-2020}
+\lfoot{Август 2018}
+\cfoot{FIL}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}}
+
+\makeatletter
+\@removefromreset{subsection}{section}
+\renewcommand\thesection{Раздел \@arabic\c@section}
+\renewcommand\thesubsection{Правило \@arabic\c@subsection}
+\makeatother
+\renewcommand{\numberline}[1]{#1~}
+
+\usepackage{enumerate}
+\usepackage[shortlabels]{enumitem}
+
+\usepackage{soul}
+\usepackage{color}
+
+\setlist[enumerate]{start=1,leftmargin=\parindent,label={\arabic{subsection}.\arabic*}}
